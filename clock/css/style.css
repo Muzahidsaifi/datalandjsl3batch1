@@ -1,0 +1,142 @@
+:root{
+    --primary-color : #000;
+    --secondary-color : #fff;
+}
+
+html.dark{
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+html.dark{
+    background-color: #111;
+    color:  var(--primary-color);
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0;
+    overflow: hidden;
+}
+.toggle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 100px;
+}
+.toggle:focus{
+    outline: 0;
+}
+.clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clock{
+    width: 200px;
+    height: 200px;
+    /* background-color: #f0f0f0; */
+
+    position: relative;
+}
+.needle{
+    width: 3px;
+    height: 65px;
+    background-color: var(--primary-color);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform-origin: bottom center;
+
+    /* should not use ease-in */
+    /* transition: all 0.5s ease-in; */
+}
+.needle.hour{
+    /* custome properties --rotation */
+    --rotation:0;
+    transform: translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.needle.minute{
+    --rotation:0;
+    height: 100px;
+    transform: translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.needle.second{
+    --rotation:0;
+    height: 100px;
+    background-color: red;
+    transform: translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.center-point{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center-point::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+.time{
+    font-size: 60px;
+}
+.date{
+    color: #999;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.date .circle{
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+
+    /* Meghod 1 */
+    /* display: inline-flex;
+    justify-content: center;
+    align-items: center; */
+
+    /* Method 2 */
+    display: inline-block;
+    text-align: center;
+    line-height: 18px;
+
+    transition: all 0.5s ease-in;
+}

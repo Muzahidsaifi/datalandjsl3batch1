@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background: linear-gradient(
+        -15deg,
+        rgba(229,92,138,1) 60%, /*dark color*/
+        rgba(240,98,146,1) 40% /*light color*/
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    width: 450px;
+    background-color: rgba(60, 66, 74, 0.9);
+    padding: 30px 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .today{
+    padding: 30px 0;
+    text-align: center;
+}
+.today h2{
+    margin: 0;
+}
+.today span{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.container .todo{
+    width: 100%;
+}
+.todo .task{
+    width: 100%;
+    padding: 10px 10px      ;
+    background-color:rgba(52, 58, 64, 1);
+    color: #fff;
+    border: 0;
+    
+}
+.todo .task:focus{
+    outline: 0;
+}
+.todo .task::placeholder{
+    color: rgba(255, 255, 255, 0.5)
+}
+.todo .list-container{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.list-container .list-item{
+    padding: 10px 0;
+
+    position: relative;
+}
+.list-item .checkbox{
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.checkbox .fa-stop{
+    color: rgba(255, 255, 255, 0);
+    font-size: 18px;
+}
+.list-item .fa-trash{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    color: red;
+}

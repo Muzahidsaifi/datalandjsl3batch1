@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    width: 65rem;
+    /* background-color: silver; */
+    padding: 20px;
+}
+.main-container{
+    width: 100%;
+    height: 35rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    /* for animation */
+    overflow: hidden;
+}
+.img-container{
+    width: 50%;
+    height: 100%;
+    background-color: darkslateblue;
+    padding: 4rem 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: myanidown 0.5s ease;
+}
+img{
+    width: 100%;
+}
+
+
+.form-container{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+
+    animation-name: myaniup;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+.form-control{
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    margin: 10px 0;
+}
+.btn{
+    width: 100%;
+    background-color: #5566e6;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    padding: 10px 0;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.form-control:focus,
+.btn:focus{
+    outline: 0;
+}
+form a{
+    text-decoration: none;
+    font-size: 14px;
+}
+form span{
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.close{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid red;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.fa-times{
+    color: red;
+}
+.register,.forgot{
+    display: none;
+}
+@keyframes myanidown {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+      transform: translateY(0%);  
+    }
+}
+@keyframes myaniup {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@media (max-width:600px) {
+    .img-container{
+        display: none;
+    }
+    .form-container{
+        width: 100%;
+    }
+}

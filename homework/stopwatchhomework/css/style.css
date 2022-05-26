@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Orbitron&display=swap');
+/* *{
+    box-sizing: border-box;
+} */
+body{
+    font-family: 'Nova Square', cursive;
+    height: 100vh;
+    background-color: #abdbed;
+    color: #696b6b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: 0; */
+}
+.container{
+    width: 30%;
+    /* height: 100%; */
+    background-color: #cdecf7;
+    padding: 10px 20px;
+/* 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+.stop,.lapbtn,.resume,.reset{
+    display: none;
+}
+.container.active .stop,.container.active .lapbtn{
+    display: block;
+}
+.container.active .start , .container.inactive .start{
+    display: none;
+}
+.container.inactive .resume,.container.inactive .reset{
+    display: block;
+}
+.container.inactive .stop , .container.inactive .lapbtn{
+    display: none;
+}
+h1{
+    text-align: center;
+}
+.display{
+    /* width: 220px;
+    height: 220px; */
+    font-size: 45px;
+    /* text-align: center; */
+    /* border-radius: 50%; */
+    padding: 20px 35px;
+    border: 2px solid #fff;
+    margin: 0 auto;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.btn{
+    border: none;
+    background-color: #696b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    margin: 0 20px;
+    cursor: pointer;
+}
+.lapul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lap{
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.lap .laptitle{
+    margin: 0 10px;
+    margin-right: 50px;
+}
+.lap span{
+    text-align: right;
+}
+@media(max-width:800px) {
+    .container{
+        width: 90%;
+    }
+}

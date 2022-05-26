@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: sans-serif;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0;
+    overflow: hidden;
+}
+.imgs-container{
+    width: 600px;
+    height: 220px;
+    /* background-color:rebeccapurple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+    margin: 20px 0;
+}
+.imagebox{
+    width: 100px;
+    height: 100px;
+    
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    margin: 0 10px;
+}
+.pizzle-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pizzle{
+    width: 300px;
+    height: 300px;
+
+    background-image: url(../img/smurfs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pizzle::before{
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    position: absolute;
+}
+.pizzlebox{
+    /* display: inline-block; */
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    float: left;
+
+    position: relative;
+}
+.pizzlebox .imagebox{
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+.hold{
+    border: 2px solid skyblue;
+}
+.hovered{
+    border-style: dashed;
+    border-color: #000;
+}
+
+.win{
+    background-color: skyblue;
+    color: #666;
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.3);
+    padding: 10px 30px;
+    text-align: center;
+    display: none;
+    margin: 20px 0;
+}
+h1{
+    color: skyblue;
+    margin: 10px 0;
+}
